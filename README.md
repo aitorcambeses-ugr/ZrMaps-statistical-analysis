@@ -131,3 +131,22 @@ See `LICENSE` for details.
 Department of Mineralogy and Petrology, University of Granada, Spain
 Sciences Faculty, Av. de la Fuente Nueva S/N 18071 Granada
 Tlf: +34958243358, email: aitorc@ugr.es
+
+
+
+---
+
+## 📚 How to cite
+
+If you use **ZrMaps-statistical-analysis**, please cite it as follows:
+
+```bibtex
+@software{cambeses_2025_zrmaps,
+  author       = {Cambeses, Aitor},
+  title        = {ZrMaps-statistical-analysis: Toolkit for the statistical detection of zircon in large X-ray elemental maps},
+  year         = {2025},
+  version      = {0.1.0},
+  doi          = {10.5281/zenodo.17690656},
+  url          = {https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis},
+  note         = {Software package archived on Zenodo. Funded by PID2023.149105NA.I00 (MCIN/AEI, Spain).}
+}
