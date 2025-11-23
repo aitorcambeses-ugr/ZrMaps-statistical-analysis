@@ -18,18 +18,12 @@ Together, these methods deliver **fast and reliable identification of zircon gra
 Zircon is a cornerstone mineral in modern **geochronology**, **petrogenesis**, and **crustal evolution studies**.  
 However, locating zircon grains in **large thin sections** or **drill-core slabs** mapped by micro-XRF or EPMA can be challenging due to:
 
-- very low Zr concentrations in most rock-forming minerals,  
-- strong signal variability related to acquisition parameters (integration time, beam intensity, matrix attenuation),  
-- sub-pixel mixing effects when using coarse pixel sizes (30–50 μm), and  
-- overlapping fluorescence lines (e.g., Zr-Kα with P-Kα or Si-Kα under specific detector geometries).
+- very low Zr concentrations in most rock-forming minerals  
+- strong signal variability related to acquisition parameters  
+- sub-pixel mixing effects at 30–50 μm grids  
+- overlapping fluorescence lines (Zr–Kα, P–Kα, Si–Kα)
 
-This toolkit provides **automated, statistically robust detection workflows** that minimise these limitations and allow high-confidence pre-screening of zircon occurrences prior to targeted analyses such as:
-
-- EPMA/WDS  
-- LA-ICP-MS  
-- SHRIMP  
-- TEM  
-- atom-probe tomography  
+This toolkit provides **automated, statistically robust detection workflows** that minimise these limitations and allow high-confidence pre-screening before targeted geochemical analyses (EPMA, LA-ICP-MS, SHRIMP, TEM, atom-probe).
 
 ---
 
@@ -37,47 +31,53 @@ This toolkit provides **automated, statistically robust detection workflows** th
 
 ### **1. Classical statistical anomaly detection**
 Included in `zircon_zr_alltests_FULL.py`:
-- **IQR (Interquartile Range) thresholds**  
-- **MAD (Median Absolute Deviation) – global**  
-- **Z-score (μ ± nσ)**  
-- **Adaptive percentiles** (P85–P95–P99.5)  
-- **Local MAD** (moving-window anomaly detection)  
-- **GMM (Gaussian Mixture Models)** for probabilistic separation
 
-Each method generates:
-- linear and log-scale anomaly maps,  
-- histograms with threshold lines,  
-- combined multi-method panels,  
-- TSV matrices, CSV summaries, and  
-- a multi-page PDF report.
+- **IQR thresholds**  
+- **MAD (Median Absolute Deviation)**  
+- **Z-score**  
+- **Adaptive percentiles** (P85–P99.5)  
+- **Local MAD**  
+- **Gaussian Mixture Models (GMM)**  
+
+Outputs include:
+
+- anomaly maps (linear/log)  
+- histograms with thresholds  
+- combined multi-method panels  
+- TSV/CSV outputs  
+- multi-page PDF report  
 
 ---
 
 ### **2. Density-based clustering**
 Included in `zircon_zr_DBSCAN_HDBSCAN.py`:
-- **DBSCAN** and **HDBSCAN** clustering on Zr intensity  
-- automatic extraction of high-density anomaly cores  
-- zircon-likeness classification (0–4 scale, consistent with statistical tests)  
-- progress bars and TSV cluster matrices  
-- optional PDF export
 
-These methods are particularly good at detecting:
-- isolated zircon grains,  
-- small zircon clusters within biotite or amphibole,  
-- zoning patterns within large Zr-rich grains.
+- DBSCAN + HDBSCAN  
+- High-density anomaly core extraction  
+- Zircon-likeness classification (0–4)  
+- TSV cluster matrices  
+- Optional PDF maps  
+
+Especially effective for:
+
+- isolated zircon grains  
+- small zircon clusters in biotite/amphibole  
+- zoning patterns  
 
 ---
 
 ### **3. Multi-element phase classification (FRAC)**
-`frac_classification_auto.py` computes FRAC ratios (FRAC_Si … FRAC_Zr) from multi-element maps and applies **KMeans clustering (k=15)** to generate phase maps useful for:
 
-- contextualising zircon within host minerals  
-- estimating local chemical composition  
-- guiding micro-sampling or microanalytical work
+`frac_classification_auto.py` implements FRAC-based clustering using KMeans (k=15), enabling:
+
+- contextualisation of zircon within host phases  
+- approximate chemical partitioning  
+- guidance for microanalysis  
 
 ---
 
 ## Repository Structure
+
 
 ZrMaps-statistical-analysis/
 │
@@ -94,6 +94,7 @@ ZrMaps-statistical-analysis/
 ├── README.md
 └── LICENSE    # MIT License
 
+
 ---
 
 ## Funding Acknowledgement
@@ -101,20 +102,15 @@ ZrMaps-statistical-analysis/
 This project has been developed within the framework of the research grant:
 
 **PID2023.149105NA.I00**  
-Funded by the **Spanish Ministry of Science, Innovation and Universities (2023 call)**  
+Funded by the **Spanish Ministry of Science, Innovation and Universities** (2023 call)  
 Principal Investigator (PI): **Aitor Cambeses Torres**
-
-The release of this toolkit aims to promote open science, reproducibility, and methodological transparency in X-ray elemental mapping.
 
 ---
 
-## Citation
+## Citation (Text)
 
-If you use this repository, please cite:
-
-Cambeses, A. (2025). ZrMaps-statistical-analysis:
-Statistical tools for zircon detection in X-ray elemental maps.
-https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis
+Cambeses, A. (2025). *ZrMaps-statistical-analysis: Statistical tools for zircon detection in X-ray elemental maps.*  
+Zenodo. https://doi.org/10.5281/zenodo.17690656
 
 ---
 
@@ -128,11 +124,14 @@ See `LICENSE` for details.
 ## Contact
 
 **Aitor Cambeses**  
-Department of Mineralogy and Petrology, University of Granada, Spain
-Sciences Faculty, Av. de la Fuente Nueva S/N 18071 Granada
-Tlf: +34958243358, email: aitorc@ugr.es
+Department of Mineralogy and Petrology  
+University of Granada, Spain  
+Faculty of Sciences, Av. de la Fuente Nueva S/N  
+18071 Granada  
+Tel: +34 958 243358  
+Email: **aitorc@ugr.es**
 
-
+---
 
 ## 📚 How to cite
 
@@ -148,4 +147,4 @@ If you use **ZrMaps-statistical-analysis**, please cite it as follows:
   url          = {https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis},
   note         = {Software package archived on Zenodo. Funded by PID2023.149105NA.I00 (MCIN/AEI, Spain).}
 }
-```
+
