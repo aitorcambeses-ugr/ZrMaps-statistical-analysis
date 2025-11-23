@@ -33,6 +33,11 @@ repository-code: "https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analys
 version: "0.1.0"
 date-released: "2025-11-23"
 
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.17690656"
+    description: "DOI for version 0.1.0 archived on Zenodo"
+
 references:
   - type: project
     title: "PID2023.149105NA.I00 (Spanish Ministry of Science, Innovation and Universities)"
@@ -48,4 +53,5 @@ preferred-citation:
     - family-names: Cambeses
       given-names: Aitor
   year: 2025
+  doi: "10.5281/zenodo.17690656"
   url: "https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis"
