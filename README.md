@@ -134,7 +134,7 @@ Tlf: +34958243358, email: aitorc@ugr.es
 
 
 
----
+## 📚 How to cite
 
 If you use **ZrMaps-statistical-analysis**, please cite it as follows:
 
@@ -148,3 +148,4 @@ If you use **ZrMaps-statistical-analysis**, please cite it as follows:
   url          = {https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis},
   note         = {Software package archived on Zenodo. Funded by PID2023.149105NA.I00 (MCIN/AEI, Spain).}
 }
+```
