@@ -148,3 +148,13 @@ If you use **ZrMaps-statistical-analysis**, please cite it as follows:
   note         = {Software package archived on Zenodo. Funded by PID2023.149105NA.I00 (MCIN/AEI, Spain).}
 }
 
+
+TY  - COMP
+T1  - ZrMaps-statistical-analysis: Toolkit for the statistical detection of zircon in large X-ray elemental maps
+AU  - Cambeses, Aitor
+PY  - 2025
+VL  - 0.1.0
+DO  - 10.5281/zenodo.17690656
+UR  - https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis
+N1  - Software package archived on Zenodo. Funded by PID2023.149105NA.I00 (MCIN/AEI, Spain).
+ER  - 
