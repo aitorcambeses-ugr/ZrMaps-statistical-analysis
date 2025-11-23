@@ -136,8 +136,6 @@ Tlf: +34958243358, email: aitorc@ugr.es
 
 ---
 
-## 📚 How to cite
-
 If you use **ZrMaps-statistical-analysis**, please cite it as follows:
 
 ```bibtex
