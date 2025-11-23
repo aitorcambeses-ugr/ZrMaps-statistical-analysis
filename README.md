@@ -1,5 +1,7 @@
 # ZrMaps-statistical-analysis
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17690656.svg)](https://doi.org/10.5281/zenodo.17690656)
+
 ## Overview
 
 **ZrMaps-statistical-analysis** is an open-source toolkit designed for the **statistical analysis, classification, and anomaly detection of chemical element maps** acquired using X-ray scanning techniques (e.g., micro-XRF, EPMA/WDS, SEM–EDS mapping, laboratory μXRF scanners, synchrotron XRF, etc.).
