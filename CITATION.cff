@@ -1,1 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ZrMaps-statistical-analysis"
+type: software
 
+authors:
+  - family-names: Cambeses
+    given-names: Aitor
+
+abstract: >
+  ZrMaps-statistical-analysis is an open-source toolkit for the statistical
+  analysis, classification, and anomaly detection of chemical element maps
+  acquired using X-ray scanning techniques (e.g., EPMA/WDS, micro-XRF,
+  SEM–EDS mapping, laboratory μXRF scanners, synchrotron XRF). The code
+  implements a multi-method framework combining classical univariate anomaly
+  detection and density-based clustering to identify zircon and other
+  accessory minerals in large-area elemental maps.
+
+keywords:
+  - zircon
+  - micro-XRF
+  - EPMA/WDS
+  - SEM-EDS
+  - X-ray mapping
+  - anomaly detection
+  - DBSCAN
+  - HDBSCAN
+  - geochemistry
+  - petrology
+
+license: MIT
+repository-code: "https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis"
+version: "0.1.0"
+date-released: "2025-11-23"
+
+references:
+  - type: project
+    title: "PID2023.149105NA.I00 (Spanish Ministry of Science, Innovation and Universities)"
+    year: 2023
+    notes: >
+      Research project funded by the Ministerio de Ciencia, Innovación y
+      Universidades (Spain). Principal Investigator: Aitor Cambeses Torres.
+
+preferred-citation:
+  type: software
+  title: "ZrMaps-statistical-analysis"
+  authors:
+    - family-names: Cambeses
+      given-names: Aitor
+  year: 2025
+  url: "https://github.com/aitorcambeses-ugr/ZrMaps-statistical-analysis"
