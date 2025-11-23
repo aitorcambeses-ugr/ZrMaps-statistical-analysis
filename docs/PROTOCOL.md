@@ -1,4 +1,4 @@
-EXECUTION PROTOCOL & OUTPUT INTERPRETATION GUIDE
+**EXECUTION PROTOCOL & OUTPUT INTERPRETATION GUIDE**
 
 ZrMaps-statistical-analysis
 
@@ -117,6 +117,7 @@ Includes:
 
 Purpose:
 Ideal for reports, publication supplements, and exploratory analysis.
+
 ———————————–
 
 ## 1. macOS (Terminal)
@@ -131,8 +132,8 @@ python3 -m pip install numpy matplotlib scikit-learn hdbscan pillow openpyxl
 If HDBSCAN fails:
 brew install cmake gcc llvm
 HDBSCAN_NO_AVX=1 python3 -m pip install hdbscan
-1.2 Workflow for Each Sample
 
+1.2 Workflow for Each Sample
 (1) Define sample
 SAMPLE="MySample"
 mkdir -p "$SAMPLE"
@@ -149,3 +150,71 @@ python3 zircon_zr_DBSCAN_HDBSCAN.py "$SAMPLE"
 ## 2. Windows CMD
 
 ———————————–
+
+2.1 Requirements
+
+Install Python 3
+
+Download from:
+
+https://www.python.org/downloads/windows/
+During installation enable:
+
+Add Python to PATH
+
+⸻
+
+Install required libraries
+
+Open CMD and run:
+pip install --upgrade pip setuptools wheel
+pip install numpy matplotlib scikit-learn hdbscan openpyxl pillow
+
+If hdbscan fails to compile:
+	Install Microsoft C++ Build Tools
+https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+Check:
+
+Desktop development with C++
+
+Then re-run:
+pip install hdbscan
+
+2.2 Initial setup (run once)
+mkdir "%USERPROFILE%\Desktop\micro_XRF"
+cd "%USERPROFILE%\Desktop\micro_XRF"
+Copy manually into this folder:
+	•	images_to_tsv_auto_delete.py
+	•	frac_classification_auto.py
+	•	zircon_zr_alltests_FULL.py
+	•	zircon_zr_DBSCAN_HDBSCAN.py
+
+	2.3 Routine workflow (for each sample)
+
+(1) Define sample name
+set SAMPLE=test
+(2) Create sample folder
+mkdir "%USERPROFILE%\Desktop\micro_XRF\%SAMPLE%"
+Copy the 10 JPG maps (Si, Ti, Al, Fe, Mg, Ca, Na, K, P, Zr) inside that folder.
+python images_to_tsv_auto_delete.py "%SAMPLE%"
+(4) FRAC – 15-phase clustering
+python frac_classification_auto.py "%SAMPLE%"
+(5) Full statistical Zr analysis (IQR, MAD, GMM, Local MAD, etc.)
+python zircon_zr_alltests_FULL.py "%SAMPLE%"
+This generates:
+	•	*_Zr_*_anomaly/ folders
+	•	linear & log PNG anomaly maps
+	•	histograms with threshold lines
+	•	TSV and CSV data tables
+	•	multi-page PDF report
+(6) DBSCAN + HDBSCAN clustering
+python zircon_zr_DBSCAN_HDBSCAN.py "%SAMPLE%"
+Generates:
+	•	*_Zr_DBSCAN/
+	•	*_Zr_HDBSCAN/
+	•	cluster maps, TSV matrices, cluster statistics
+(7) Inspect results
+dir "%SAMPLE%"
+
+
